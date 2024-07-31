@@ -30,7 +30,7 @@ const Inicio = () => {
     const consultarActas = () => {
         setActaLoading(true)
         axios.get("https://37latuqm766patrerdf5rvdhqe0wgrug.lambda-url.us-east-1.on.aws/?cedula=V" + cedula + "&recaptcha=03AFcWeA5MyVu-lhI0QkvPODr2kFIeOGlfdt_AAHuN-YPa9vg2K1oC_vte_aRnukfnX1oNN3OuYQeCUOnn5eAKa3OwRsIeA8Wb-cRIJbGkRAddHQYSixinCkFeX3kWF5idn-6Rt6zp261CiEY9nh5Kkn3mylCuaZM-MJLuC6kiK8VJag2z8hoMbOS1xhN0IQLzaI7mjj1cfaJsXXpsJD0hGB8IOqzGgSj5lZK_TYjVTq86u7yQoOmzpoGRcYohlOJOJKZ4C3OW_TWRqhdNmx3d9nVsveiT2VvVfgFAD8HorrnZt8mHQ4FVsCola46dUj5iJksuZj93jBs_NByqiEM2oHoLAdYXH6ko24CELvvL7vJo2w0mnh2s7RrKp9BTwzuTvooolpeXLwqUTshRLESUsCdlgcXtQSxB2Q5Ad-o2kJ8vn5tbZPlZNYdQFjuo0GlISrhIuXjNyZA9TWn8mQo0l9YkVo3UWfMnsD35dtsxMvjhP6UCSl9O0Vz5p0cTqqOcZ0pKuANSTp9QsajQiOfzBeioM-2E7i5QN1kmQqXOYEdQ7fZo2teqgs9p4i96N4sQkwZuege_wQkhrB7YySDbH0PzFL22Fg01UEx4-dql1C5eO9GLx8wEqtneON5sGaujIIIfp9r6aKQly1bBMUv7EUMmxm9GYf5OtaH0q0M-tuAwNVDvetmF5mPyxhVTyBuV1Zj1C8Shf5N5_7WUc4WXRgFjDTvlI2xXzs2mRW0sFlLSuj2JiRrbfMRwPqk_v0NlW72ZP5HeYDX83ytqXCUo0FSzrh232xGnBWDWfsogjUbQG9Am8gxS7GkhCld5AnEpvK8k5bUGICq8akEqZTyJdYrORUYgwaFSdQ")
-            .then(({ data }) => {setActa(data.url);setActaLoading(false)})
+            .then(({ data }) => {setActa(data.url);setActaLoading(false)}, () => setActaLoading(false))
     }
 
     return (
