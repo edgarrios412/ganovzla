@@ -9,6 +9,7 @@ import Apertura from "./pages/Apertura";
 import TiendaDetail from "./pages/TiendaDetail";
 import { CarritoContext } from "./components/context/CarritoContext";
 import Busqueda from "./pages/Busqueda";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
   return (
     <>
       {/* <NavBar /> */}
+      <Analytics/>
       <Routes>
         <Route path="/" element={<Inicio />} />
         {/* <Route path="/buscar/:busqueda" element={<Busqueda />} /> */}
